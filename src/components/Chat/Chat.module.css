@@ -1,0 +1,126 @@
+.chatMain {
+    width: 76%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #e5ddd5;
+}
+
+.noChatSelected {
+    margin: auto;
+    text-align: center;
+    color: #999;
+    font-size: 1.2rem;
+}
+
+.chatHeader {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+}
+
+.contactAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.contactDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactName {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contactStatus {
+    font-size: 0.85rem;
+    color: #25d366; /* WhatsApp green */
+}
+
+.messagesContainer {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #e5ddd5;
+    scroll-behavior: smooth;
+}
+
+.myMessage {
+    align-self: flex-end;
+    background-color: #dcf8c6; /* WhatsApp green for sent messages */
+    padding: 10px;
+    border-radius: 8px 8px 0 8px;
+    max-width: 60%;
+    word-wrap: break-word;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.contactMessage {
+    align-self: flex-start;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px 8px 8px 0;
+    max-width: 60%;
+    word-wrap: break-word;
+    position: relative;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.timestamp {
+    font-size: 0.75rem;
+    color: #999;
+    text-align: right;
+    margin-top: 5px;
+}
+
+.messageInputContainer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-top: 1px solid #ddd;
+}
+
+.messageInput {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #fff;
+}
+
+.sendButton {
+    width: 40px;
+    height: 40px;
+    background-color: #25d366; /* WhatsApp green */
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.sendButton i {
+    font-size: 1.2rem;
+}
+
+.sendButton:hover {
+    background-color: #128c7e; /* Darker WhatsApp green */
+}
