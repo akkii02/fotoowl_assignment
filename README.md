@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# WhatsApp Web-like Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This application mimics WhatsApp Web, featuring real-time messaging with offline capabilities. Built with React.js, InstantDB, and local storage support via a custom hook, the app ensures smooth functionality both online and offline.
 
-## Available Scripts
+## Features
+- **Contact List**: View available contacts.
+- **Real-Time Chat**: Send and receive messages in real time.
+- **Offline Support**: View and send messages offline; data syncs when online.
+- **Responsive Design**: Adapts seamlessly to different screen sizes.
 
-In the project directory, you can run:
+## Core Technologies
+- **React.js**
+- **InstantDB** (Real-time database)
+- **IndexedDB** (Offline storage)
+- **React Hooks** (`useState`, `useEffect`, `useReducer`, and custom hooks)
 
-### `npm start`
+## How to Set Up and Run
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Prerequisites
+- Node.js >= 16.x
+- NPM or Yarn
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo-name/whatsapp-clone.git
+   cd whatsapp-clone
+   ```
 
-### `npm test`
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Set up environment variables (if needed):
+   - Configure InstantDB app ID in the code.
 
-### `npm run build`
+4. Start the application:
+   ```bash
+   npm start
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Build for Production
+```bash
+npm run build
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Design Choices
+- **State Management**: Used React Context and `useReducer` for global state handling, ensuring scalability.
+- **Local Storage**: A custom hook (`useOffline`) ensures seamless offline functionality by syncing data with localStorage.
+- **Styling**: CSS Modules for scoped styles, ensuring no style leakage across components.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Challenges Faced
+1. **Syncing Local and Remote Data**: Balancing offline-first capabilities with real-time database sync required thoughtful state management.
+2. **Responsiveness**: Achieving a consistent look across screen sizes was challenging but addressed using CSS Flexbox.
 
-### `npm run eject`
+## How It Works
+1. **Select a User**: Log in as one of the two users.
+2. **Select a Contact**: Choose a contact from the sidebar to initiate a chat.
+3. **Send Messages**: Messages are sent in real time when online, with offline fallback syncing later.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Demo
+You can find the deployed version of the app https://fotoowl-assignment.vercel.app/
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Future Enhancements
+- Add Context for managing global state.
+- Implement useReducer for better state control.
+- Add push notifications for new messages.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
